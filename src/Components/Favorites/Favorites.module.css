@@ -1,0 +1,50 @@
+.productContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #dda853;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  background-color: #fbf5dd;
+}
+
+.Card {
+  background-color: #fffdec;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 500px;
+}
+
+.imgcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  border-radius: 8px 8px 0 0;
+  background-color: white;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.details {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: start;
+  height: 330px;
+  font-size: 14px;
+  border-radius: 0 0 8px 8px;
+  background-color: #a6cdc6;
+  z-index: 1;
+  padding: 10px;
+}
+
+.favoriteRemove {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}

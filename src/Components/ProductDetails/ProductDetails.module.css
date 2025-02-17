@@ -1,0 +1,48 @@
+.details {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  transform: translate(-50%, 0);
+  left: 50%;
+  width: 80vw;
+  /* margin-top: 20px; */
+  background-color: bisque;
+  padding: 50px;
+  text-align: center;
+}
+.details p {
+  text-align: justify;
+}
+.details h3,
+h1 {
+  text-align: left !important;
+}
+.details img {
+  /* display: block; */
+  /* background-color: rgba(0, 0, 0, 0.3); پس‌زمینه نیمه‌شفاف */
+
+  /* position: relative;
+  left: 50%;
+  transform: translate(-50%, 0); */
+}
+.imagebox {
+  display: block; /* بعضی مواقع برای تگ‌های div لازمه */
+
+  position: relative;
+  width: 300px;
+  height: 300px;
+  left: 50%;
+  background-position: center;
+  background-size: contain; /* تصویر رو داخل کادر نگه می‌داره */
+  background-repeat: no-repeat;
+  transform: translate(-50%, 0);
+}
+.btnContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+

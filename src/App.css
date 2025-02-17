@@ -1,0 +1,147 @@
+#root {
+  text-decoration: none;
+}
+/*
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+* {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.horizontal-slider {
+  position: relative;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  width: 500px !important;
+  height: 5px !important;
+  background-color: red;
+  margin: 20px 0;
+}
+.horizontal-slider .thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  width: 25px !important;
+  height: 25px !important;
+  border-radius: 50% !important;
+  background-color: #a6cdc6;
+  position: absolute;
+  top: 50%;
+  /* left: 50%; */
+  transform: translate(0, -50%);
+  cursor: grab;
+}
+main {
+  min-height: calc(100vh - 150px);
+  background-color: #bad6d1;
+}
+
+button {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  text-decoration: none !important;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:after {
+  position: absolute;
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+button:hover:after {
+  transform: translate(0, 0);
+}
+
+button:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+button:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  button {
+    padding: 0 40px;
+  }
+}
+a {
+  text-decoration: none !important;
+}
+/* ///////////////////////////// */
+
+/* ///////////////////////////////////////// */
+.rotating {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
