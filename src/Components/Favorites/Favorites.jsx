@@ -6,13 +6,6 @@ import { useNavigate } from "react-router-dom";
 
 const Favorites = () => {
   const { productsData, setProductsData } = useContext(Contexts);
-  //   const likedArraykeys = Object.keys(likedProduct);
-  // const likedArrayvalues = Object.entries(ProductsList)
-  //   .filter(([key, value]) => value === true)
-  // .map((ke) => Number(ke[0]));//دمم گرم اینو درسته ولی خب باید درست تر نوشت
-  // .map(([key]) => Number(key));
-  //   console.log(likedArraykeys);
-  // console.log(likedArrayvalues);
   const navigate = useNavigate();
   const getIdHandler = (id) => {
     navigate(`/product/${id}`);

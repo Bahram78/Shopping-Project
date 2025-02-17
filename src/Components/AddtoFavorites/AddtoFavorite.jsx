@@ -21,14 +21,6 @@ const AddtoFavorite = ({ id, customClass }) => {
     });
   };
 
-  // useEffect(() => {
-  //   console.log("jan bachat", productsData);
-  // }, [productsData]);
-
-  // const clearHandler = () => {
-  //   localStorage.clear();
-  //   setProductsList([]);
-  // };
 
   const currentProduct = productsData.find((p) => p.id === id);
   const isFavorite = currentProduct?.isfavorite;
@@ -37,8 +29,6 @@ const AddtoFavorite = ({ id, customClass }) => {
       <button onClick={Handlefavoriteproduct} className={customClass}>
         {!isFavorite ? "Add to favorites" : "Remove from favorites"}
       </button>
-
-      {/* <button onClick={clearHandler}>Clear Favorites Data</button> */}
     </>
   );
 };

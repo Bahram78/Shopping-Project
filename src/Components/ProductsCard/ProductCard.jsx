@@ -6,7 +6,6 @@ const ProductsCard = ({ product }) => {
   const Handlecarddetails = (id) => {
     navigate(`/product/${id}`);
   };
-  // console.log("gholiim",product.id)
   return (
     <>
       <div>
@@ -22,7 +21,6 @@ const ProductsCard = ({ product }) => {
           <h3>Category : {product.category}</h3>
           <h3>Available : {product.available}</h3>
           <h3>Rata : {product.rating.rate}</h3>
-          {/*Aya rahi joz customclass bod? baresi shavad  */}
           <AddtoFavorite id={product.id} customClass={Styles.addtoFavorite} />
         </div>
       </div>

@@ -9,7 +9,6 @@ const AddtoCard = ({ id }) => {
     productAvailable,
     setProductAvailable,
   } = useContext(Contexts);
-  // console.log("bbbb", firstAvailableref?.current);
   useEffect(() => {
     const StoredList = sessionStorage.getItem("savedProducts");
     setProductsData(productsData ? JSON.parse(StoredList) : []);

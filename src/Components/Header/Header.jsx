@@ -5,12 +5,7 @@ import { Contexts } from "../../App";
 
 const Header = () => {
   const Locations = useLocation();
-  // const { productData, setProductData } = useContext(Contexts);
 
-  // const clearHandler = () => {
-  //   sessionStorage.clear();
-  //   setProductData([]);
-  // };
   return (
     <div>
       <div className={Styles.HeaderName}>
@@ -45,8 +40,6 @@ const Header = () => {
             Shopping Card
           </button>
         </Link>
-
-        {/* <button onClick={clearHandler}>Reset Data</button> */}
       </div>
     </div>
   );

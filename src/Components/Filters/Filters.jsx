@@ -10,7 +10,6 @@ const Filters = () => {
     productsData,
     setRangeValue,
     rangeValue,
-    MinPriceref,
     MaxPriceref,
     checkedCategories,
     setCheckedCategories,
@@ -18,12 +17,7 @@ const Filters = () => {
   } = useContext(Contexts);
 
   const Categ = [...new Set(productsData.map((product) => product.category))];
-  // console.log(Categ);
 
-  // تغییر وضعیت هر چک‌باکس
-  // const handleCheckboxChange = (category) => {
-  //   setCheckedCategories({ [category]: !checkedCategories[category] });
-  // };
   const handleCheckboxChange = (category) => {
     setCheckedCategories((prevState) => ({
       ...prevState,
@@ -47,13 +41,6 @@ const Filters = () => {
 
  
 
-  // const [handleValue, setHandleValue] = useState([0, 500]);
-  // useEffect(() => {
-  //   console.log(handleValue);
-  // }, [handleValue]);
-  // console.log(MaxPriceref.current);
-  // console.log(MinPriceref.current);
-
   useEffect(() => {
     if (productsData.length > 0) {
       // MinPriceref.current = Math.min(
@@ -66,10 +53,7 @@ const Filters = () => {
     setRangeValue([0, MaxPriceref.current]);
   }, [productsData]);
 
-  // useEffect(() => {
-  //   console.log("sss",checkedCategories);
-  // }, [checkedCategories]);
-  // console.log(rangeValue[0], rangeValue[1]);
+
   return (
     <>
       <form className={Styles.container}>
@@ -96,16 +80,13 @@ const Filters = () => {
           className="horizontal-slider"
           thumbClassName="thumb"
           trackClassName="track"
-          // defaultValue={[Min, Max]}
           ariaLabel={["Lower thumb", "Upper thumb"]}
           onChange={setRangeValue}
           value={rangeValue}
-          // ariaValuetext={(state) => `Thumb value ${state.valueNow}`}
-          // renderThumb={(props, state) => <div {...props}>{state.valueNow}</div>}
-          pearling //باعث هول دادن هندل ها میشه
-          minDistance={10} //حداقل فاصله بین هندل هارو تعیین میکنه
-          min={0} // مقدار کمینه از داده‌ها
-          max={1000} // مقدار بیشینه از داده‌ها
+          pearling 
+          minDistance={10} 
+          min={0} 
+          max={1000} 
         />
 
         <div>

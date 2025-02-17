@@ -10,27 +10,6 @@ const ProductList = () => {
     filterd,
   } = useContext(Contexts);
 
-  // const CategoryNames = checkedCategories.filter((checkedCateg) =>
-  //   Object.values(checkedCateg)
-  // );اولین چیزی که به دهنم رسید
-
-  // useEffect(() => {
-  //   console.log("jan bachat", productsData);
-  // }, [productsData]);
-  // console.log("scascsac", checkedCategories);
-
-  // useEffect(() => {
-  //   setIsFiltered(false);
-  // }, [rangeValue, checkedCategories]);
-
- 
-  // const CategoryNames = Object.keys(checkedCategories).filter(
-  //   (category) => checkedCategories[category] === true
-  // );میشه طولانی تر اینجوری هم نوشت
-
-  // Object.keys(Object.values(checkedCategories));
-  // console.log("Names", CategoryNames);
-
   useEffect(() => {
     const storedFavorites = sessionStorage.getItem("savedProducts");
 
@@ -70,11 +49,9 @@ const ProductList = () => {
                   product.price >= filterd.range[0] &&
                   product.price <= filterd.range[1]
               )
-              // .filter((product, index) => product.category === CategoryNames[index])
               .filter(
                 (product) =>
                   filterd.categories.length === 0 ||
-                  // checkedCategories[product.category]
                   filterd.categories.includes(product.category)
               )
               .map((product) => {

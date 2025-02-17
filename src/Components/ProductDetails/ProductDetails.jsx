@@ -6,14 +6,12 @@ import { useParams } from "react-router-dom";
 import AddtoCard from "../AddtoCard/AddtoCard";
 import AddtoFavorite from "../AddtoFavorites/AddtoFavorite";
 import { RotatingLines } from "react-loader-spinner";
-// import ProductList from "../ProductsList/ProductsList";
 
 const ProductDetails = () => {
   const { productData, setProductData, productAvailable, loading, setLoading } =
     useContext(Contexts);
   const params = useParams();
 
-  // console.log("first", productAvailable);
 
   useEffect(() => {
     setLoading(true);
@@ -26,7 +24,6 @@ const ProductDetails = () => {
       })
       .finally(() => setLoading(false));
 
-    // return () => controller.abort(); // لغو درخواست هنگام تغییر یا unmount شدن
   }, [params.id]);
 
   if (!productData || Object.keys(productData).length === 0 || loading) {
@@ -43,13 +40,10 @@ const ProductDetails = () => {
     );
   }
 
-  // if (loading) {
-  //   return;
-  // }
+ 
   return (
     <>
       <div className={Styles.details}>
-        {/* <img src={productData.image} width={100} /> */}
         <div
           style={{ backgroundImage: `url(${productData.image}) ` }}
           className={Styles.imagebox}

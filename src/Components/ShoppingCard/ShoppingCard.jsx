@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from "react";
 import { Contexts } from "../../App";
 import Styles from "./ShoppingCard.module.css";
 import { useNavigate } from "react-router-dom";
-// import AddtoCard from "../AddtoCard/AddtoCard";
 
 const ShoppingCard = () => {
   const { productsData, setProductsData, firstAvailableref, productAvailable } =
